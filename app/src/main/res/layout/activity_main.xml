@@ -1,54 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:background="#e6e6e6"
     tools:context=".MainActivity">
 
-
-    <EditText
-        android:id="@+id/name"
+    <LinearLayout
         android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="62dp"
-        android:ems="10"
-        android:hint="Name"
-        android:inputType="textPersonName" />
+        android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/rollno"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="132dp"
-        android:ems="10"
-        android:hint="Roll. No"
-        android:inputType="textPersonName" />
 
-    <EditText
-        android:id="@+id/phone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="202dp"
-        android:ems="10"
-        android:hint="Mobile No."
-        android:inputType="phone" />
+        <TextView
+            android:layout_width="220dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:layout_height="match_parent"
+            android:text="Student Tracker"
+            android:textSize="60sp"/>
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="171dp"
-        android:onClick="registerStudent"
-        android:text="Register" />
-</RelativeLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_student_01"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="365dp"
+        android:orientation="vertical"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_gravity="center"
+        android:background="@drawable/card"
+        android:gravity="center"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/name"
+
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Name"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/rollno"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Roll. No"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Mobile No."
+            android:inputType="phone" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:onClick="registerStudent"
+            android:elevation="30dp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:background="@color/colorPrimaryDark"
+            android:text="Sign up" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
